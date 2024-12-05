@@ -1,7 +1,6 @@
 import random
 
-checked_bag = False
-regret_ending=False
+
 
 
 def observe_check(observation, difficulty):
@@ -23,7 +22,7 @@ def charisma_check(charisma, difficulty):
     
 
 def main():
-    
+    global checked_bag
     skill_points = 10
     print("""
 --Welcome to 'The Next Town Over', a mini choose-your-own adventure text-based game!--
@@ -93,6 +92,7 @@ Type the number of the option you'd like to pick:
     """
     Has MAX prepared for this trip?""")
             if observe_check(observation,3)==True: # 3 is the difficulty of the check. lower number are easier checks.
+                checked_bag=True
                 print("""(You passed an OBSERVATION check.)
                       
 Hanging from SILO's saddle are two storage bags, loaded with goods. Inside is enough food and water to last until reaching the next town over. Along side them are a few other object: a lantern, rope, and a map.""")
@@ -185,7 +185,50 @@ MAX dismounts off his horse, and raises his hands up by his head, palms facing f
                   
 The woman eyes MAX suspiciously before her posture softens and her glare becomes less harsh. 
                   
-                  ???: 'I suppose it's true you can come through this way to the city,' the woman seems to muse aloud.""")
+                  ???: 'I suppose it's true you can come through this way to the city,' the woman seems to muse aloud. 'But I ain't seen any folk from your village in a long while. I'd say in the last fifteen years.' She raises an eyebrow at MAX prompting him to respond.
+                  
+                  MAX: 'Well...Ever since the War, and even a tad before then, my town was never too fond of gettin' involved in all that controversy and such.'
+                  
+                  ???: 'Controversy?' she parrots back to him. 'I ain't ever in my 60 years of livin' heard nobody call slavery a 'controversy. What a word.' She takes a moment to evaluate MAX again, looking him and SILO up and down. 'You two runnin' away from home?'
+                  
+                  MAX: 'No. Not quite. Just wanted to see what the world is like.'
+                  
+                  ???: 'What's your name, kid?'
+                  
+                  MAX: 'MAX, ma'am.'
+                  
+                  ???: 'Well, Max, my name is ALMA. Let me be the first to tell you that the world ain't all that great!' She huffs a laugh and reaches her arms out, gesturing to... the world.
+                  """)
+        else:
+            print("""
+            (You failed a CHARISMA check)
+        
+MAX straightens up on SILO, presenting his best posture before speaking. 
+                  
+                  MAX: 'No need to worry, woman. I only plan to tresspass until I get to the city!'
+                  
+The MYSTERY WOMAN keep the same glare directed toward him. MAX feels sweat beading on his neck.
+                  
+                  ???: 'Typicaly, tresspassing is not allowed at all,' her voice is stern and frankly, a little scary.""")
+    if choice_2 == "2":
+        print("""
+    Run MAX, run!!!
+              
+MAX kicks into SILO's sides, startling the horse into movement.
+              
+              ???: 'GET BACK HERE,' the woman yells, her voice fading the farther away MAX rides.
+            
+Riding deeper into the forest, MAX realizes too late that he has veered off of the pre-established path in his urgent escape. He's lost.
+              
+MAX rides around for hours until nightfall, SILO and himself needing a break. In the daylight, the forest had been a haven from the sun, but now, it hid everything, not even the moon is able to shine through the canopy of trees. Every rustle of wind, every snapping twig and falling acorn sounds like danger. Praying for sleep to take him, MAX stares idly into the dark, leaning against a tree trunk while sat on the ground. Hopefully he'd be able to find his way home by morning...
+              
+              Wait a minute! Maybe he had something in his bag to help!
+              """)
+        input("""Press Enter to continue:
+              """)
+        if checked_bag==True:
+            print
+
 
 if __name__=="__main__":
     main()
