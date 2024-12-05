@@ -19,7 +19,13 @@ def charisma_check(charisma, difficulty):
     else:
         return False
 
-    
+def strength_check(strength, difficulty):
+    num_list = [1,2,3,4,5,6]
+    strength += int((random.choice(num_list)))
+    if strength>=difficulty:
+        return True
+    else:
+        return False
 
 def main():
     global checked_bag
@@ -147,6 +153,7 @@ Alright then, I just hope you made the right call...
 
                   
                   """)
+            quit()
             
         
         ### choice 3 ^^^
