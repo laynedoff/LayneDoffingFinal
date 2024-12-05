@@ -4,11 +4,16 @@ checked_bag = False
 regret_ending=False
 
 
-def observe_check(x):
-    
+def observe_check(observation, difficulty):
+    if observation>=difficulty:
+        return True
+    else:
+        return False
+
     
 
 def main():
+
     skill_points = 10
     print("""
 --Welcome to 'The Next Town Over', a mini choose-your-own adventure text-based game!--
@@ -75,7 +80,7 @@ Type the number of the option you'd like to pick:
         if choice_1=="2":
             print(
     """Has MAX prepared for this trip?""")
-            if observe_check(3)==True: # 3 is the difficulty of the check. lower number are easier checks.
+            if observe_check(observation,3)==True: # 3 is the difficulty of the check. lower number are easier checks.
                 print("""
 Hanging from SILO's saddle are two storage bags, loaded with goods. Inside is enough food and water to last until reaching the next town over.""")
             choice_1=input("""
