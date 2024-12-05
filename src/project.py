@@ -37,6 +37,8 @@ Your points will determine whether or not you are able to make certain decisions
     if skill_points==0:
         print("""
               You have no more skill points to distribute.""")
+        charisma = 0
+        strength = 0
         input("Enter any key to continue: ")
     else:
         charisma = int(input(f"You have {skill_points} skill points left to use. Enter a number 0-{skill_points} to attribute to CHARISMA: "))
@@ -44,6 +46,7 @@ Your points will determine whether or not you are able to make certain decisions
         if skill_points == 0:
             print("""
                   You have no more skill points to distribute.""")
+            strength = 0
             input("Enter any key to continue: ")
         else:
             strength = int(input(f"You have {skill_points} skill points left to use. Enter a number 0-{skill_points} to attribute to STRENGTH: "))
@@ -227,7 +230,9 @@ MAX rides around for hours until nightfall, SILO and himself needing a break. In
         input("""Press Enter to continue:
               """)
         if checked_bag==True:
-            print
+            print("""(You OBSERVED MAX's bag earlier, granting you access to the items inside.)
+                  
+That's right, the lantern and the map! MAX sighs with relief, sagging further against the tree. He pulls the lantern out and lights it, careful to set it down away from any plants looking too dry. As a precaution, he takes the rope from his bag and hitches SILO to the tree he had been using to rest. Settling back down on the ground, MAX grabs the map from one of his bags and places it on the ground near the light, seeing if he can make out where he is. Listening closely, he can hear running water, so he narrows his position down to somewhere a long the river snaking through the forest. It probably would be easier to tell once it was morning. Feeling more at ease, MAX extinguishes the lantern, not wanting to attract any unwanted attention, and rests his eyes until morning.""")
 
 
 if __name__=="__main__":
