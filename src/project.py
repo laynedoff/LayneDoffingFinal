@@ -8,7 +8,7 @@ regret_ending=False
 
 def main():
     print("""
---Welcome to 'Walk in the Forest', a mini choose-your-own adventure text-based game!--
+--Welcome to 'The Next Town Over', a mini choose-your-own adventure text-based game!--
           
 Our story starts in a small town, in rural America, circa the 1870's. Tensions are high here in the South, the end of the Civil War bringing just as much pain and suffering as it did grant freedom to others. Those who were now set free still struggling with day-to-day life and discrimination, while others deal with the deaths of their fathers or sons in the war.
 But even despite the extrodinary changes that have already occured, there is still more to come.
