@@ -1,8 +1,5 @@
 # The Next Town Over
 
-## Demo
-Demo Video: <URL>
-
 ## GitHub Repository
 GitHub Repo: <Uhttps://github.com/laynedoff/LayneDoffingFinal.git>
 
